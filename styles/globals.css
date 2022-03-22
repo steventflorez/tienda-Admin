@@ -41,6 +41,10 @@ a {
   transition-property: all;
     transition-duration: 0.4s;
 }
+.obli{
+  color: red;
+  font-size: 15px;
+}
 
 .btn-opcion{
   width: 100%;

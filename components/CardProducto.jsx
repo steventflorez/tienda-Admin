@@ -1,45 +1,28 @@
 
 
 
-export const CardProducto = ({titulo,img,des,total,fin,comicion}) => {
+export const CardProducto = ({ product, editar, eliminar }) => {
 
+  const edit = ()=>{
+    editar(product)
+  }
+  
+  const eliminarArticulo=()=>{
+    eliminar(product.id)
     
-    const login = localStorage.getItem('login')
-    let display = 'badge bg-info d-none'
-    //const [display,setDisplay]=useState('badge bg-info d-none')
-    
-    if(login == 'true'){
-      display ='badge bg-info d-block'
-    }
+}
 
   return (
-    <div className='col-lg-4 col-12'>
-      <div className="card bg-light mb-3 " style={{ maxWidth: '20rem' }}>
-        <div className="card-header">{titulo}</div>
-        <div className="card-body alinear">
-
-          <img className='img' src={img} />
-          <p>{des}</p>
-        </div>
-        <div className="card-footer">
-          <div className="row">
-            <div className="col-12">
-              <span className="badge bg-primary"><strong>Precio Decontado:</strong>$ {total}</span>
-
-            </div>
-            <div className="col-12">
-              <span className="badge bg-warning"><strong>Precio Financiado:</strong> $ {fin}</span>
-            </div>
-            <br />
-            <div className="col-12">
-              <span className={display}><strong>Comición:</strong> $ {comicion}</span>
-            </div>
-
-          </div>
-          <br />
-          <button type="button" className="btn btn-success w-100">Adquirir</button>
-        </div>
-      </div>
-    </div>
+    
+        <tr className="table-primary">
+          <th scope="row">{product.titulo}</th>
+          <td>{product.descripcion}</td>
+          <td>{product.precio_total}</td>
+          <td>{product.precio_fin}</td>
+          <td>{product.comicion}</td>
+          <td><button type="button" onClick={edit} className="btn btn-success">Editar</button></td>
+          <td><button type="button" onClick={eliminarArticulo} className="btn btn-danger">Eliminar</button></td>
+        </tr>
+     
   )
 }

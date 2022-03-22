@@ -89,7 +89,7 @@ export default function Modal({ display, upModal, accion, producto, rute, cargar
 
             cargar()
         } else {
-            const { data: nuevo } = await axios.put('http://localhost:3000/api/productos', {
+            const { data: nuevo } = await axios.put('/api/productos', {
                 titulo: productoNew.titulo,
                 img: productoNew.img,
                 descripcion: productoNew.descripcion,
@@ -168,7 +168,7 @@ export default function Modal({ display, upModal, accion, producto, rute, cargar
 
                                     <div className="col-6">
                                         <div className="form-group">
-                                            <label htmlFor="exampleInputEmail1" className="form-label mt-4">Comicion <span className='obli'>*</span></label>
+                                            <label htmlFor="exampleInputEmail1" className="form-label mt-4">Comision <span className='obli'>*</span></label>
                                             <input type="number" className="form-control" id="comi" aria-describedby="emailHelp" placeholder="Telefono" />
 
                                         </div>

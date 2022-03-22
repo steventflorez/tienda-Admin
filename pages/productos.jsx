@@ -38,7 +38,7 @@ export default function productos() {
         const cargarProductos = async () => {
 
 
-            const { data: productos } = await axios.get('http://localhost:3000/api/productos', {
+            const { data: productos } = await axios.get('/api/productos', {
                 params: {
                     ruta: rute
 
@@ -98,7 +98,7 @@ export default function productos() {
     }
 
     const eliminarArticulo = async (idd) => {
-        const res = await axios.delete('http://localhost:3000/api/productos', {
+        const res = await axios.delete('/api/productos', {
             params: {
                 id: idd
             }

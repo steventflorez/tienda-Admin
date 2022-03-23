@@ -146,6 +146,7 @@ export default function productos() {
                                 product={producto}
                                 editar={editarModal}
                                 eliminar={eliminarArticulo}
+                                
                             />
                         ))}
 

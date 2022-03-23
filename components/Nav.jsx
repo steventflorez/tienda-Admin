@@ -28,11 +28,22 @@ export const Nav = ({ children }) => {
           </button>
           <div className={show} id="navbarColor02">
             <ul className="navbar-nav me-auto">
-            <Link href='/solicitudes'>
+              <li className="nav-item">
+              <Link href='/solicitudes'>
                   <a className="nav-link active" >Solicitudes
                     <span className="visually-hidden">(current)</span>
                   </a>
                 </Link>
+              </li>
+
+              <li className="nav-item">
+              <Link href='/vendedores'>
+                  <a className="nav-link active" >Vendedores
+                    <span className="visually-hidden">(current)</span>
+                  </a>
+                </Link>
+              </li>
+            
 
             </ul>
 

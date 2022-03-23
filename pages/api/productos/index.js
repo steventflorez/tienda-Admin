@@ -19,12 +19,13 @@ export default function index(req, res) {
 }
 
 const getProductos = async (req, res) => {
-
+    console.log('entro!!')
     try {
         const ruta = req.query.ruta
         const [result] = await pool.query(`SELECT * FROM productos WHERE ruta = ${ruta} `)
         return res.status(200).json(result)
     } catch (error) {
+        console.log(error.message, 'entro en error')
         return res.status(200).json(error.message)
         console.log(error.message)
     }

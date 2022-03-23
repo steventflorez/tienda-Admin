@@ -77,7 +77,6 @@ export default function solicitudes() {
                             <th scope="col">Correo</th>
                             <th scope="col">Referido</th>
                             <th scope="col">Cuotas</th>
-                            <th scope="col">Estado</th>
                             <th scope="col">Direccion</th>
                             <th scope="col">id vendedor</th>
                             <th scope="col">id producto</th>

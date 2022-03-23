@@ -36,7 +36,7 @@ export default function productos() {
 
     useEffect(() => {
         const cargarProductos = async () => {
-
+            console.log(rute)
 
             const { data: productos } = await axios.get('/api/productos', {
                 params: {

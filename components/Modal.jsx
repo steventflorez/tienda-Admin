@@ -40,11 +40,11 @@ export default function Modal({ display, upModal, accion, producto, rute, cargar
         const data = new FormData()
 
         data.append("file", fil)
-        data.append("upload_preset", "productos")
+        data.append("upload_preset", "grupopoder")
         setLoading(true)
 
         const res = await fetch(
-            "https://api.cloudinary.com/v1_1/stevet94/image/upload", {
+            "https://api.cloudinary.com/v1_1/grupo-poder/image/upload", {
             method: "POST",
             body: data,
         }
